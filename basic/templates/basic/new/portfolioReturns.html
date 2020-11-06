@@ -62,7 +62,7 @@
         {% for i in product%}
         
             <div class='col-sm-{{count}} column12'>     
-            <a type="button" href="#{{i}}" class="btn btn-outline-danger mx-3 venobox" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+            <a type="button" href="{% url 'product' i.id%}" class="btn btn-outline-danger mx-3 "  title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
                 {{i}}
             </a>
             </div>
