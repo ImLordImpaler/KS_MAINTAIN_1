@@ -12,19 +12,20 @@
         <div class="row portfolio-container">
         
       {% for i in obj %}
-        
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{{i.picture1.url}}" class="img-fluid port" alt="">
-              <div class="portfolio-info">
-                <h4>{{i.name}}</h4>
-                  <div class="portfolio-links">
-                    <a href="{{i.picture1.url}}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="far fa-image"></i></a>
-                    <a href="{% url 'product' i.id%}"><i class="fas fa-file-medical-alt"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% if i.picture1.url %}
+           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+             <div class="portfolio-wrap">
+               <img src="{{i.picture1.url}}" class="img-fluid port" alt="">
+               <div class="portfolio-info">
+                 <h4>{{i.name}}</h4>
+                   <div class="portfolio-links">
+                     <a href="{{i.picture1.url}}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="far fa-image"></i></a>
+                     <a href="{% url 'product' i.id%}"><i class="fas fa-file-medical-alt"></i></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         {% endfor%}
         
 {% endfor %}
           <style>
