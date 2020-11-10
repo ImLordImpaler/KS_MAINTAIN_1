@@ -11,7 +11,7 @@ def homepage(request):
     obj = Product.objects.all()
     l1 = []
     for i in range(len(obj)):
-        if i<5:
+        if i<6:
             l1.append(obj[i])
         else:
             break
@@ -95,10 +95,9 @@ def about(request):
 
 def port(request):
     product = Product.objects.all()
-    rowCount =  12 // Product.objects.count()
+    
     params = {
         'product': product,
-        'count': rowCount
     }
     return render(request , 'basic/new/portfolioReturns.html' , params)
 
