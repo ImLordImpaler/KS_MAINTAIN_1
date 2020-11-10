@@ -1,33 +1,58 @@
+
+
 <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
+   
+   
 
-      <h1 class="logo"><a href="{% url 'home'%}">KS Fastner</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mainHeading ml-5" href="#">KS FASTNERS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <nav class="nav-menu d-none d-lg-block">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <div class='container d-flex '>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home'%}">Home </a> 
+            </li>
+            <li class="nav-item pl-2">
+              <a class="nav-link" href="{%url 'about'%}">About </a>
+            </li>
+            <li class='nav-item pl-2'>
+              <a class='nav-link' href="#portfolio">Portfolio </a>
+            </li>
+            <li class='nav-item pl-2'>
+              <a class='nav-link' href="#footer">Contact</a>
+            </li>
+            <li class='nav-item pl-2'>
+              <a class='nav-link' href="{% url 'policy' %}">Our Policy</a>
+            </li>
+            <li class="nav-item pl-2">
+              <a class="nav-link disabled" href="#">SignUP?</a>
+            </li>
+           
+          </ul>
+        </div>
+        <br>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc52v_Kr_PP4k513ikku6PifFoGwxhLEfHyCaujqYu1Z1TC9g/viewform?embedded=true" class="get-started-btn ml-auto">Request A Call back?</a>
 
-        <ul>
-          <li class=""><a href="{% url 'home'%}">Home</a></li>
+        </div>
+        
+      </nav>
+   
+  </header> 
 
-          <li class=""><a href="{%url 'about'%}">About</a>
-            
-          </li>
+  <style>
 
-          
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#footer">Contact</a></li>
-          <li><a href="{% url 'policy' %}">Our Policy</a></li>
-          
-          
+    .mainHeading{
+      font-size: 30px;
+      font-weight: 600;
+    }
+    #header{
+      background-color: #F8F9FA;
+    }
+  </style>
 
-        </ul>
 
-      </nav><!-- .nav-menu -->
-
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc52v_Kr_PP4k513ikku6PifFoGwxhLEfHyCaujqYu1Z1TC9g/viewform?embedded=true" class="get-started-btn ml-auto">Call back?</a>
-
-    </div>
-  </header><!-- End Header -->
-
-  

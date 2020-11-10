@@ -8,8 +8,9 @@
         </div>
 
        
-
+<a href="{% url 'port'%}" class='btn btn-outline-dark mb-3' >View More</a>
         <div class="row portfolio-container">
+        
       {% for i in obj %}
         
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -32,7 +33,7 @@
               width: 100%;
             }
           </style>
-          </div><a href="{% url 'port'%}" class='btn btn-outline-dark' >View More</a>
+          </div><a class='btn btn-outline-dark' href="{% url 'port' %}" >View More?</a>
         
 
       </div>

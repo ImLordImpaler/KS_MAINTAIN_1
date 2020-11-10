@@ -1,15 +1,20 @@
-if request.method =='POST':
-        emailId = request.POST.get('emailId' ,'')
-        name = request.POST.get('nameId' , '')
-        phone = request.POST.get('phoneId' , '')
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <nav class="nav-menu d-none d-lg-block">
 
-        subject = 'Call back infomation'
-        message = emailId +'' + phone + '' + name + '.'
-        if subject and emailId and name and phone:
-            try:
-                send_mail(subject, message , emailId , ['rachit.saxena42@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return HttpResponse('<h1> Your email was recorded' + name + '</h1>')
-        else:
-            return HttpResponse('Make sure all fields are entered and valid.')
+        <ul>
+          <li class=""><a href="{% url 'home'%}">Home</a></li>
+
+          <li class=""><a href="{%url 'about'%}">About</a>
+            
+          </li>
+
+          
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="{% url 'policy' %}">Our Policy</a></li>
+          
+          
+
+        </ul>
+
+      </nav>
